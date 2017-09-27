@@ -1,5 +1,5 @@
-var db = require('../db');
-db.connect();
+var db = require('db');
+//db.connect();
 
 function User(name) {
   this.name = name;
@@ -7,10 +7,10 @@ function User(name) {
 
 User.prototype.hello = function(who) {
   console.log(db.getPhrase("hello") + ", " + who.name);
-}
+};
 
-console.log("user.js is required!");
+//console.log("user.js is required!");
 
-console.log(module);
+//console.log(module);
 
-exports.User = User;
+module.exports = User;
